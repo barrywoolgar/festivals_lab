@@ -5,7 +5,7 @@ require "openssl" # Provides HMAC-SHA1
 class FestivalsLab
   attr_accessor :access_key, :secret_token
 
-  SCHEME = "http".freeze
+  SCHEME = "https".freeze
   HOST = "api.edinburghfestivalcity.com".freeze
 
   def initialize(access_key, secret_token)
