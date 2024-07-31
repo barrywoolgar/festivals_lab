@@ -88,7 +88,11 @@ class FestivalsLab
       uri.scheme = SCHEME
       uri.host   = HOST
       # Now the URI has a scheme we can convert it to an actual URI::HTTP
-      URI.parse(uri.to_s)
+      x = URI.parse(uri.to_s)
+      Rails.logger.error(x.inspect)
+      puts "API URL"
+      puts x.inspect
+      x
     end
 
     # Returns the correct API signature for the given URL and secret token
